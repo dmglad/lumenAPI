@@ -11,6 +11,12 @@
 |
 */
 
+$router->get('/', function() {
+    return response()->json([
+        'message' => 'Hello from Lumen API',
+    ], 200);
+});
+
 $router->post('/login', 'AuthController@authenticate');
 
 $router->post('/register', 'AuthController@register');
